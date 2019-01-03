@@ -32,7 +32,7 @@ Poking around the engine source code a bit, you can find out where this happens,
 
 In scene.glsl, the LIGHT_SHADER_CODE is contained in a glsl function named "light_compute".  We need to be able to modify the final alpha here somehow.  Looking at
 how this function is called, it seems easiest to pass the current alpha in as a in/out parameter.
-The steps to accomplish this are: modifying light compute, modifying callers to [light compute](https://github.com/bzztbomb/godot/commit/f68d1ebb4b00db71772cb4a83c9ee1cf4b7168f9).
+The steps to accomplish this are: modifying light compute, modifying callers to light compute.  You can see the modifications [here](https://github.com/bzztbomb/godot/commit/f68d1ebb4b00db71772cb4a83c9ee1cf4b7168f9).
 
 Recompile the engine and start up a project.
 
